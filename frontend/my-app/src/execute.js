@@ -14,32 +14,33 @@ const Compile = () => {
 				language,
 				code,
 			}),
-		})
-			.then((resp) => resp.json())
-			.then((data) => setOutput(data));
-		console.log(output);
-	};
+		}).then(resp => resp.json()).then(data =>setOutput(data.output))
+		
+	}
+	
+	
+	
 
 	return (
 		<div className="app">
 			<div>
-				<select id="lan" className="app">
+				<select id="lan" className="dropdown">
 					<option>cpp</option>
 					<option>Python</option>
 				</select>
 			</div>
 			
 				<div class="cmd">
-					<div class="title-bar">Code Editor</div>
-					<textarea class="textarea" id="code">
-						Type something here...
+					<div className="title-bar">Code Editor</div>
+					<textarea className="textarea" id="code">
+						Enter your code here
 					</textarea>
 				</div>
 			
 			<button className="button" onClick={execute}>
 				Submit
 			</button>
-			<div className='output' id="output">{output}</div>
+			<p className='output' id="output">{output}</p>
 		</div>
 	);
 };

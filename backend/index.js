@@ -19,8 +19,10 @@ app.post('/run', async (req, res) => {
     const filepath = await generateFile('py', body.code)
     const output = await executePy(filepath)
     //await removeFile(filepath)
-    return res.json(output)  
+    return res.json({"output": output})  
 })
+
+
 
 app.listen(5000, () => {
     console.log("Running")

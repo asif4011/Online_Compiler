@@ -7,11 +7,21 @@ background-color: rgb(247, 242, 235);
     flex-direction: column;
     justify-content: center;
     
+    
 }
 .app{
     font-style: italic;
     color: rgb(18, 113, 201);
     max-width: 50%;
+    margin: 10px 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: xx-large;
+    align-items: center;
+}
+
+.dropdown{
+    padding: 0;
+    margin-bottom: 20px;
 }
 
 textarea {
@@ -118,6 +128,8 @@ textarea {
 
 .output{
     margin-top: 25px ;
-    font-family: monospace;
-    font-size: larger;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #000000;
+    color: #FFFFFF;
+    width: fit-content;
 }
