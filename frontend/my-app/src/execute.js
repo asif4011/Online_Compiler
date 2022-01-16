@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 const Compile = () => {
 	const [output, setOutput] = useState("");
+	
 	const execute = async () => {
 		const language = document.getElementById("lan").value;
 		const code = document.getElementById("code").value;
@@ -14,13 +15,14 @@ const Compile = () => {
 				language,
 				code,
 			}),
-		}).then(resp => resp.json()).then(data =>setOutput(data.output))
+		}).then(resp => resp.json()).then(data =>setOutput(JSON.parse(format(JSON.stringify(data.output)))))
 		
 	}
-	
-	
-	
 
+	const format = (output) => {
+		return output.replace(/(?:\\[rn])+/g, "<br>")
+	}
+	
 	return (
 		<div className="app">
 			<div>
@@ -40,7 +42,7 @@ const Compile = () => {
 			<button className="button" onClick={execute}>
 				Submit
 			</button>
-			<p className='output' id="output">{output}</p>
+			<iframe className='output' title='output' srcDoc={output} id="output"></iframe>
 		</div>
 	);
 };

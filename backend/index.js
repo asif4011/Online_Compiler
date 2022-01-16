@@ -4,13 +4,15 @@ const bodyParser = require('body-parser')
 const { generateFile } = require('./generateFile')
 const {executePy} = require('./executePy')
 const { removeFile } = require('./removeFile')
+const path = require('path')
 const app = express()
 
 app.use(bodyParser())
 app.use(cors())
+app.use(express.static(path.join(__dirname,'build')))
 
 app.get('/', (req, res) => {
-    res.json({hello: "World"})
+    res.sendFile(path.join(__dirname,'build','index.html'))
 })
 
 app.post('/run', async (req, res) => {

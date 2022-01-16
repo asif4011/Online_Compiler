@@ -1,83 +1,80 @@
-*{
-background-color: rgb(247, 242, 235);
+* {
+	background-color: rgb(247, 242, 235);
 }
 
-.main{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    
-    
+.main {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
-.app{
-    font-style: italic;
-    color: rgb(18, 113, 201);
-    max-width: 50%;
-    margin: 10px 10px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: xx-large;
-    align-items: center;
+.app {
+	font-style: italic;
+	color: rgb(18, 113, 201);
+	max-width: 50%;
+	margin: 10px 10px;
+	font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+	font-size: xx-large;
+	align-items: center;
 }
 
-.dropdown{
-    padding: 0;
-    margin-bottom: 20px;
+.dropdown {
+	padding: 0;
+	margin-bottom: 20px;
 }
 
 textarea {
-    margin-top: 10px;
-    margin-left: 50px;
-    width: 500px;
-    height: 100px;
-    -moz-border-bottom-colors: none;
-    -moz-border-left-colors: none;
-    -moz-border-right-colors: none;
-    -moz-border-top-colors: none;
-    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.07);
-    border-color: -moz-use-text-color #FFFFFF #FFFFFF -moz-use-text-color;
-    border-image: none;
-    border-radius: 6px 6px 6px 6px;
-    border-style: none solid solid none;
-    border-width: medium 1px 1px medium;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12) inset;
-    color: #555555;
-    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-size: 1em;
-    line-height: 1.4em;
-    padding: 5px 8px;
-    transition: background-color 0.2s ease 0s;
-  }
-  
-  
-  textarea:focus {
-      background: none repeat scroll 0 0 #FFFFFF;
-      outline-width: 0;
-  }
-
-  body{
-	font-family: arial;	
+	margin-top: 10px;
+	margin-left: 50px;
+	width: 500px;
+	height: 100px;
+	-moz-border-bottom-colors: none;
+	-moz-border-left-colors: none;
+	-moz-border-right-colors: none;
+	-moz-border-top-colors: none;
+	background: none repeat scroll 0 0 rgba(0, 0, 0, 0.07);
+	border-color: -moz-use-text-color #ffffff #ffffff -moz-use-text-color;
+	border-image: none;
+	border-radius: 6px 6px 6px 6px;
+	border-style: none solid solid none;
+	border-width: medium 1px 1px medium;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12) inset;
+	color: #555555;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 1em;
+	line-height: 1.4em;
+	padding: 5px 8px;
+	transition: background-color 0.2s ease 0s;
 }
 
-.wrapper{
+textarea:focus {
+	background: none repeat scroll 0 0 #ffffff;
+	outline-width: 0;
+}
+
+body {
+	font-family: arial;
+}
+
+.wrapper {
 	width: 800px;
 	height: 100vh;
 	margin: 0 auto;
-	
+
 	display: flex;
 	align-items: center;
 	justify-content: center;
 }
 
-.cmd{
+.cmd {
 	position: relative;
 	display: block;
-	
+
 	height: 300px;
 	width: 100%;
 	border: 1px solid #000000;
 	border-radius: 4px;
 	overflow: hidden;
-	
+
 	box-shadow: 0px 8px 18px #4b1d3f;
 }
 
@@ -86,7 +83,7 @@ textarea {
  * 2. Set dimension
  * 3. Style
  */
-.title-bar{
+.title-bar {
 	/* 1 */
 	position: absolute;
 	top: 0;
@@ -97,15 +94,14 @@ textarea {
 	height: 40px;
 	/* 3 */
 	display: block;
-	color: #FFFFFF;
+	color: #ffffff;
 	line-height: 40px;
 	font-weight: 600;
 	background-color: #242424;
 	text-align: center;
 }
 
-
-.textarea{
+.textarea {
 	position: relative;
 	top: 70px;
 	padding: 12px;
@@ -113,23 +109,25 @@ textarea {
 	width: 100%;
 	height: calc(100% - 70px);
 	background-color: #4b1d3f !important;
-	color: #FFFFFF;
-    font-family: monospace;
+	color: #ffffff;
+	font-family: monospace;
 	margin: 0px;
 	font-size: 1.1rem;
 }
 
-.button{
-    background-color: #008CBA;
-    padding: 10px 10px;
-    margin-top: 20px;
-    font-style: oblique;
+.button {
+	background-color: #008cba;
+	padding: 10px 10px;
+	margin-top: 20px;
+	font-style: oblique;
 }
 
-.output{
-    margin-top: 25px ;
-    font-family: 'Courier New', Courier, monospace;
-    background-color: #000000;
-    color: #FFFFFF;
-    width: fit-content;
+.output {
+	margin-top: 100px;
+	font-family: "Courier New", Courier, monospace;
+	background-color: #ffffff;
+	color: #ffffff;
+	width: fit-content;
+	position: absolute;
+	left: 20px;
 }

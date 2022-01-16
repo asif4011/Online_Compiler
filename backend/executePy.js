@@ -6,7 +6,7 @@ const fs = require('fs')
 const executePy = (filepath) => {
     
     const output = new Promise((resolve, reject) => {
-        exec(`python ${filepath}`,
+        exec(`python3 ${filepath}`,
             (err, stdout, stderr) => {
                 if (err) {
                     
